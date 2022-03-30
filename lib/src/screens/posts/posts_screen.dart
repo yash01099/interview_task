@@ -41,7 +41,7 @@ class _PostsScreenState extends State<PostsScreen> {
                     return CardWrapper(
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Flexible(
                               child: Column(

@@ -15,7 +15,7 @@ class FavouriteScreen extends StatefulWidget {
 class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   void initState() {
-    PostController.to.getPostList();
+    // PostController.to.getPostList();
     super.initState();
   }
 
@@ -42,7 +42,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                       return CardWrapper(
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Flexible(
                                 child: Column(

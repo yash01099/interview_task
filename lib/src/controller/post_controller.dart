@@ -15,7 +15,6 @@ class PostController extends GetxController {
       final List<String> items = prefs.getStringList('favourites') ?? [];
 
       for (var item in postList) {
-        print(items);
         if (items.contains(item.id.toString())) {
           item.isFavourite = true;
         }
@@ -38,12 +37,12 @@ class PostController extends GetxController {
       items.removeWhere((element) => element == postId.toString());
       await prefs.setStringList('favourites', items);
       posts[index].isFavourite = false;
-      update(['posts','fav_posts']);
+      update(['posts', 'fav_posts']);
     } else {
       items.add(postId.toString());
       await prefs.setStringList('favourites', items);
       posts[index].isFavourite = true;
-      update(['posts','fav_posts']);
+      update(['posts', 'fav_posts']);
     }
   }
 }
